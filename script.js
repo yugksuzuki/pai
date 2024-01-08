@@ -26,6 +26,9 @@ function exibirRegistros() {
         div.innerHTML = `<p>Data: ${afericao.data} | Hora: ${afericao.hora} | Sistólica: ${afericao.sistolica} | Diastólica: ${afericao.diastolica}</p>`;
         registrosDiv.appendChild(div);
     });
+
+    // Adicione a chamada para enviarDadosParaDoutores após exibir os registros
+    setTimeout(enviarDadosParaDoutores, 21 * 24 * 60 * 60 * 1000); // 21 dias em milissegundos
 }
 
 function limparFormulario() {
