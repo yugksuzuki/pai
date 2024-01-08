@@ -1,4 +1,5 @@
-let registros = [];
+// Recupera os registros armazenados localmente ou inicializa um array vazio
+let registros = JSON.parse(localStorage.getItem("pressaoRegistros")) || [];
 
 function registrarAfericao() {
     const data = document.getElementById("data").value;
@@ -9,12 +10,15 @@ function registrarAfericao() {
     const afericao = { data, hora, sistolica, diastolica };
     registros.push(afericao);
 
+    // Salva os registros localmente
+    localStorage.setItem("pressaoRegistros", JSON.stringify(registros));
+
     exibirRegistros();
     limparFormulario();
 }
 
 function exibirRegistros() {
-    const registrosDiv = document.getElementById("registros");
+    const registrosDiv = document.getElementById("pressaoRegistros");
     registrosDiv.innerHTML = "<h3>Aferições Registradas</h3>";
 
     registros.forEach(afericao => {
@@ -30,3 +34,6 @@ function limparFormulario() {
     document.getElementById("sistolica").value = "";
     document.getElementById("diastolica").value = "";
 }
+
+// Exibe os registros ao carregar a página
+window.onload = exibirRegistros;
