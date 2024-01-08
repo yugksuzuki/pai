@@ -24,6 +24,11 @@ input, button {
     margin-bottom: 10px;
 }
 
+#registros {
+    margin-top: 20px;
+    color: #333;
+}
+
 .medicos {
     margin-top: 20px;
     font-style: italic;
@@ -36,4 +41,23 @@ input, button {
     border: 1px solid #ccc;
     padding: 10px;
     background-color: #f9f9f9;
+}
+
+/* Adicione quadros para as fotos dos doutores */
+#doutor1 {
+    background-image: url('doutor1.jpg');
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    margin: 10px;
+}
+
+#doutor2 {
+    background-image: url('doutor2.jpg');
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    margin: 10px;
 }
