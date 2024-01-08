@@ -44,7 +44,6 @@ input, button {
 }
 
 /* Adicione quadros para as fotos dos doutores */
-/* Adicione quadros para as fotos dos doutores */
 #doutor1 {
     background-image: url('doutor1.jpeg'); /* Substitua 'doutor1.jpg' pelo nome real do arquivo */
     background-size: cover;
