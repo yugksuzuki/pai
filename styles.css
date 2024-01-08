@@ -28,3 +28,10 @@ input, button {
     margin-top: 20px;
     color: #333;
 }
+
+.medicos {
+    margin-top: 20px;
+    font-style: italic;
+    font-weight: bold;
+    color: #0066cc;
+}
