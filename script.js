@@ -35,5 +35,19 @@ function limparFormulario() {
     document.getElementById("diastolica").value = "";
 }
 
+// Função para enviar dados para os doutores
+function enviarDadosParaDoutores() {
+    const emailDoutores = "g-suzuki@hotmail.com";
+    
+    // Construir o corpo do e-mail com os registros
+    const corpoEmail = "Aferições Registradas:\n\n";
+    registros.forEach(afericao => {
+        corpoEmail += `Data: ${afericao.data} | Hora: ${afericao.hora} | Sistólica: ${afericao.sistolica} | Diastólica: ${afericao.diastolica}\n`;
+    });
+
+    // Simular o envio do e-mail abrindo o cliente de e-mail padrão
+    window.location.href = `mailto:${emailDoutores}?subject=Aferições%20Registradas&body=${encodeURIComponent(corpoEmail)}`;
+}
+
 // Exibe os registros ao carregar a página
 window.onload = exibirRegistros;
