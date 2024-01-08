@@ -13,7 +13,7 @@
             background-color: #f0f0f0;
             margin: 0;
             padding: 0;
-            background-image: url(');
+            background-image: url('caminho/para/sua/imagem_de_plano_de_fundo.jpg');
             background-size: cover; /* Ajusta o tamanho da imagem para cobrir todo o corpo */
         }
 
@@ -49,18 +49,7 @@
         }
 
         /* Adicione quadros para as fotos dos doutores */
-        #doutor1 {
-            background-image: url('doutor1.jpeg');
-            background-size: cover;
-            width: 200px;
-            height: 200px;
-            display: inline-block;
-            margin: 10px;
-        }
-
-        #doutor2 {
-            background-image: url('doutor2.jpeg');
-            background-size: cover;
+        #doutor1, #doutor2 {
             width: 200px;
             height: 200px;
             display: inline-block;
@@ -69,7 +58,9 @@
     </style>
 </head>
 <body>
-    <div id="doutor1"></div>
+    <div id="doutor1"><img src="doutor1.jpeg" alt="Doutor 1"></div>
+    <div id="doutor2"><img src="doutor2.jpeg" alt="Doutor 2"></div>
+
     <h2>Registro de Pressão Arterial</h2>
     <p class="medicos">Médicos responsáveis: Dr. Guilherme e Dra. Cindy</p>
 
