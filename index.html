@@ -10,11 +10,9 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            background-color: #f0f0f0;
+            background-color: #f5f5f5; /* Tom de cinza claro */
             margin: 0;
             padding: 0;
-            background-image: url('caminho/para/sua/imagem_de_plano_de_fundo.jpg');
-            background-size: cover; /* Ajusta o tamanho da imagem para cobrir todo o corpo */
         }
 
         h2 {
@@ -22,26 +20,19 @@
         }
 
         form {
-            margin: 20px;
-            padding: 20px;
+            margin: 20px auto;
+            padding: 15px;
+            max-width: 300px; /* Ajuste a largura conforme necessário */
             border: 1px solid #ccc;
             background-color: #fff;
-            border-radius: 10px;
-            display: inline-block;
+            border-radius: 8px;
         }
 
         input, button, select {
             margin-bottom: 10px;
-            padding: 5px; /* Adiciona algum preenchimento aos elementos de entrada */
-            width: 80%; /* Define uma largura padrão de 80% */
-            box-sizing: border-box; /* Inclui a largura e a altura com a borda e o preenchimento */
-        }
-
-        .medicos {
-            margin-top: 20px;
-            font-style: italic;
-            font-weight: bold;
-            color: #0066cc;
+            padding: 8px; /* Adiciona algum preenchimento aos elementos de entrada */
+            width: calc(100% - 16px); /* Adiciona largura total com desconto do preenchimento */
+            box-sizing: border-box; /* Garante que a largura inclua preenchimento e borda */
         }
 
         #pressaoRegistros {
@@ -49,16 +40,19 @@
             border: 1px solid #ccc;
             padding: 10px;
             background-color: #f9f9f9;
+            max-width: 300px; /* Ajuste a largura conforme necessário */
+            margin-left: auto;
+            margin-right: auto;
         }
 
         /* Adicione quadros para as fotos dos doutores */
         #doutor1, #doutor2 {
-            width: 200px;
-            height: 200px;
+            width: 60px; /* Metade do tamanho anterior */
+            height: 60px; /* Metade do tamanho anterior */
             display: inline-block;
-            margin: 10px;
-            border: 5px solid #0066cc; /* Adiciona uma borda azul */
-            border-radius: 10px; /* Borda arredondada */
+            margin: 5px; /* Metade do tamanho anterior */
+            border: 3px solid #0066cc; /* Metade da espessura anterior */
+            border-radius: 4px; /* Metade do raio anterior */
             overflow: hidden; /* Garante que a borda não se estenda além das imagens */
         }
         
@@ -66,7 +60,21 @@
             width: 100%;
             height: 100%;
             object-fit: cover; /* Ajusta o tamanho da imagem para cobrir todo o quadro */
-            border-radius: 10px; /* Borda arredondada para as imagens */
+            border-radius: 4px; /* Metade do raio anterior */
+        }
+
+        #saudacao {
+            font-size: 14px; /* Metade do tamanho anterior */
+            font-weight: bold;
+            margin-top: 5px; /* Metade do tamanho anterior */
+            color: #0066cc;
+        }
+
+        .medicos {
+            margin-top: 5px; /* Metade do tamanho anterior */
+            font-style: italic;
+            font-weight: bold;
+            color: #0066cc;
         }
     </style>
 </head>
@@ -81,7 +89,7 @@
         <label for="data">Data:</label>
         <input type="date" id="data" name="data" required>
 
-        <label for="hora">Hora:</label>
+        <label for="hora">Período do Dia:</label>
         <select id="hora" name="hora" required>
             <option value="manha">Manhã</option>
             <option value="tarde">Tarde</option>
@@ -89,10 +97,10 @@
         </select>
 
         <label for="sistolica">Pressão Sistólica (mmHg):</label>
-        <input type="number" id="sistolica" name="sistolica" required pattern="[0-9]+" style="width: 80%;">
+        <input type="number" id="sistolica" name="sistolica" required pattern="[0-9+]">
 
         <label for="diastolica">Pressão Diastólica (mmHg):</label>
-        <input type="number" id="diastolica" name="diastolica" required pattern="[0-9]+" style="width: 80%;">
+        <input type="number" id="diastolica" name="diastolica" required pattern="[0-9+]">
 
         <button type="button" onclick="registrarAfericao()">Registrar Aferição</button>
     </form>
