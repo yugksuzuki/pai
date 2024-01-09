@@ -56,9 +56,9 @@ input, button {
 }
 
 #saudacao {
-    font-size: 14px; /* Metade do tamanho anterior */
+    font-size: 140px; /* Metade do tamanho anterior */
     font-weight: bold;
-    margin-top: 5px; /* Metade do tamanho anterior */
+    margin-top: 50px; /* Metade do tamanho anterior */
     color: #0066cc;
 }
 
