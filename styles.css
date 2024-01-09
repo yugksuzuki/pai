@@ -14,7 +14,7 @@ h2 {
 form {
     margin: 20px auto;
     padding: 15px;
-    max-width: 300px;
+    max-width: 150px; /* Metade do tamanho anterior */
     border: 1px solid #ccc;
     background-color: #fff;
     border-radius: 8px;
@@ -32,19 +32,19 @@ input, button {
     border: 1px solid #ccc;
     padding: 10px;
     background-color: #f9f9f9;
-    max-width: 300px;
+    max-width: 150px; /* Metade do tamanho anterior */
     margin-left: auto;
     margin-right: auto;
 }
 
 /* Adicione quadros para as fotos dos doutores */
 #doutor1, #doutor2 {
-    width: 120px;
-    height: 120px;
+    width: 60px; /* Metade do tamanho anterior */
+    height: 60px; /* Metade do tamanho anterior */
     display: inline-block;
-    margin: 10px;
-    border: 5px solid #0066cc; /* Adiciona uma borda azul */
-    border-radius: 8px; /* Borda arredondada */
+    margin: 5px; /* Metade do tamanho anterior */
+    border: 3px solid #0066cc; /* Metade da espessura anterior */
+    border-radius: 4px; /* Metade do raio anterior */
     overflow: hidden; /* Garante que a borda não se estenda além das imagens */
 }
 
@@ -52,18 +52,18 @@ input, button {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Ajusta o tamanho da imagem para cobrir todo o quadro */
-    border-radius: 8px; /* Borda arredondada para as imagens */
+    border-radius: 4px; /* Metade do raio anterior */
 }
 
 #saudacao {
-    font-size: 18px;
+    font-size: 14px; /* Metade do tamanho anterior */
     font-weight: bold;
-    margin-top: 10px;
+    margin-top: 5px; /* Metade do tamanho anterior */
     color: #0066cc;
 }
 
 .medicos {
-    margin-top: 10px;
+    margin-top: 5px; /* Metade do tamanho anterior */
     font-style: italic;
     font-weight: bold;
     color: #0066cc;
