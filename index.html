@@ -79,6 +79,28 @@
     </style>
 </head>
 <body>
+      // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyAlJnWVecMQqS2mmZVrys_7MQTK8yRsid4",
+    authDomain: "pai123-ba601.firebaseapp.com",
+    projectId: "pai123-ba601",
+    storageBucket: "pai123-ba601.appspot.com",
+    messagingSenderId: "124479796279",
+    appId: "1:124479796279:web:da7fec55f6b5b2a9b6fbb2",
+    measurementId: "G-0LVTPHWGWR"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
     <div id="doutor1"><img src="doutor1.jpeg" alt="Doutor 1"></div>
     <div id="doutor2"><img src="doutor2.jpeg" alt="Doutor 2"></div>
 
