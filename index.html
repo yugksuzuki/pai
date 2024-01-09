@@ -30,9 +30,11 @@
             display: inline-block;
         }
 
-        input, button {
+        input, button, select {
             margin-bottom: 10px;
             padding: 5px; /* Adiciona algum preenchimento aos elementos de entrada */
+            width: 80%; /* Define uma largura padrão de 80% */
+            box-sizing: border-box; /* Inclui a largura e a altura com a borda e o preenchimento */
         }
 
         .medicos {
@@ -80,18 +82,25 @@
         <input type="date" id="data" name="data" required>
 
         <label for="hora">Hora:</label>
-        <input type="time" id="hora" name="hora" required>
+        <select id="hora" name="hora" required>
+            <option value="manha">Manhã</option>
+            <option value="tarde">Tarde</option>
+            <option value="noite">Noite</option>
+        </select>
 
         <label for="sistolica">Pressão Sistólica (mmHg):</label>
-        <input type="number" id="sistolica" name="sistolica" required pattern="[0-9]+" style="width: 80px;"> <!-- Adiciona largura fixa e ajusta o estilo -->
+        <input type="number" id="sistolica" name="sistolica" required pattern="[0-9]+" style="width: 80%;">
 
         <label for="diastolica">Pressão Diastólica (mmHg):</label>
-        <input type="number" id="diastolica" name="diastolica" required pattern="[0-9]+" style="width: 80px;"> <!-- Adiciona largura fixa e ajusta o estilo -->
+        <input type="number" id="diastolica" name="diastolica" required pattern="[0-9]+" style="width: 80%;">
 
         <button type="button" onclick="registrarAfericao()">Registrar Aferição</button>
     </form>
 
     <div id="pressaoRegistros"></div>
+
+    <!-- Adicione uma área para notificações -->
+    <div id="notificacoes"></div>
 
     <script src="script.js"></script>
 </body>
