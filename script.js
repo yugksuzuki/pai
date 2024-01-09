@@ -7,6 +7,12 @@ function registrarAfericao() {
     const sistolica = document.getElementById("sistolica").value;
     const diastolica = document.getElementById("diastolica").value;
 
+    // Validar se os campos estão preenchidos
+    if (!data || !hora || !sistolica || !diastolica) {
+        exibirNotificacao("Preencha todos os campos antes de registrar a aferição.");
+        return;
+    }
+
     const afericao = { data, hora, sistolica, diastolica };
     registros.push(afericao);
 
@@ -50,6 +56,17 @@ function enviarDadosParaDoutores() {
 
     // Simular o envio do e-mail abrindo o cliente de e-mail padrão
     window.location.href = `mailto:${emailDoutores}?subject=Aferições%20Registradas&body=${encodeURIComponent(corpoEmail)}`;
+}
+
+// Adicione a função para exibir notificações
+function exibirNotificacao(mensagem) {
+    const notificacoesDiv = document.getElementById("notificacoes");
+    notificacoesDiv.innerHTML = `<p>${mensagem}</p>`;
+    // Adicione estilos ou classes para estilização visual
+    // Use setTimeout para remover a notificação após alguns segundos
+    setTimeout(() => {
+        notificacoesDiv.innerHTML = "";
+    }, 5000); // Remover após 5 segundos
 }
 
 // Exibe os registros ao carregar a página
