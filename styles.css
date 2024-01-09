@@ -24,7 +24,7 @@ form {
 
 input, button {
     margin-bottom: 10px;
-    padding: 5px; /* Adiciona algum preenchimento aos elementos de entrada */
+    padding: 8px; /* Adiciona algum preenchimento aos elementos de entrada */
 }
 
 #pressaoRegistros {
@@ -36,8 +36,8 @@ input, button {
 
 /* Adicione quadros para as fotos dos doutores */
 #doutor1, #doutor2 {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     display: inline-block;
     margin: 10px;
     border: 5px solid #0066cc; /* Adiciona uma borda azul */
@@ -50,4 +50,18 @@ input, button {
     height: 100%;
     object-fit: cover; /* Ajusta o tamanho da imagem para cobrir todo o quadro */
     border-radius: 10px; /* Borda arredondada para as imagens */
+}
+
+#saudacao {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #0066cc;
+}
+
+.medicos {
+    margin-top: 10px;
+    font-style: italic;
+    font-weight: bold;
+    color: #0066cc;
 }
